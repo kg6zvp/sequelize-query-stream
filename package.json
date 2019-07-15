@@ -1,0 +1,54 @@
+{
+  "name": "sequelize-query-stream",
+  "version": "1.0.0",
+  "description": "Stream results from a db connection",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "clean": "rimraf dist",
+    "lint": "eslint src test",
+    "lint:fix": "eslint src test --fix",
+    "test": "mocha --require @babel/register --recursive --reporter spec --bail --exit --timeout 3600 && npm run-script lint"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staeco/sequelize-query-package.git"
+  },
+  "bugs": {
+    "url": "https://github.com/staeco/sequelize-query-package/issues"
+  },
+  "author": "Stae",
+  "license": "MIT",
+  "dependencies": {
+    "pg-query-stream": "github:contra/node-pg-query-stream",
+    "pump": "^3.0.0",
+    "through2": "^3.0.0",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.4.4",
+    "@stae/babel-node": "^0.1.0",
+    "@stae/linters": "^0.1.2",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "babel-runtime": "^6.26.0",
+    "eslint": "^6.0.1",
+    "eslint-cli": "^1.1.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-array-func": "^3.0.0",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-compat": "^2.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-mocha": "^5.0.0",
+    "eslint-plugin-no-loops": "^0.3.0",
+    "eslint-plugin-prefer-arrow": "^1.1.3",
+    "eslint-plugin-promise": "^4.0.1",
+    "mocha": "^5.2.0",
+    "rimraf": "^2.5.0",
+    "should": "^13.2.3"
+  }
+}
